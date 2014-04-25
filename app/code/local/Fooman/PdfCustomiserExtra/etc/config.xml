@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Fooman_PdfCustomiserExtra>
+            <version>0.1.0</version>
+        </Fooman_PdfCustomiserExtra>
+    </modules>
+
+    <global>
+        <models>
+            <fooman_pdfcustomiserextra>
+                <class>Fooman_PdfCustomiserExtra_Model</class>
+                <resourceModel>fooman_pdfcustomiserextra_mysql4</resourceModel>
+            </fooman_pdfcustomiserextra>
+        </models>
+        <helpers>
+            <fooman_pdfcustomiserextra>
+                <class>Fooman_PdfCustomiserExtra_Helper</class>
+            </fooman_pdfcustomiserextra>
+        </helpers>
+        <blocks>
+            <fooman_pdfcustomiserextra>
+                <class>Fooman_PdfCustomiserExtra_Block</class>
+            </fooman_pdfcustomiserextra>
+        </blocks>
+        <events>
+            <fooman_pdfcustomiser_pdf_template>
+                <observers>
+                    <fooman_pdfcustomiser_pdf_template_observer>
+                        <type>singleton</type>
+                        <class>Fooman_PdfCustomiserExtra_Model_Observer</class>
+                        <method>foomanPdfcustomiserPdfTemplate</method>
+                    </fooman_pdfcustomiser_pdf_template_observer>
+                </observers>
+            </fooman_pdfcustomiser_pdf_template>
+        </events>
+    </global>
+</config>
