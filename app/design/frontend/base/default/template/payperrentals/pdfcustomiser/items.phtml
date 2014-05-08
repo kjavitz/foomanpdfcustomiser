@@ -26,13 +26,13 @@
            <td><strong><?php echo $this->__('Rental Start Date:')?></strong></td><td><?php echo $start_date ?></td>
         </tr>
         <tr>
-           <td><strong><?php echo $this->__('Rental End Date:')?></strong></td><td><?php echo $end_date ?></td>
+           <td><strong><?php echo $this->__('Rental End Date:')?></strong></td><td><?php echo $this->getPdfHelper()->getOrder()->getEndDatetime()?$end_date:'' ?></td>
         </tr>
         <tr>
-           <td><strong><?php echo $this->__('Dropoff Date:')?></strong></td><td><?php echo $send_date ?></td>
+           <td><strong><?php echo $this->__('Dropoff Date:')?></strong></td><td><?php echo $this->getPdfHelper()->getOrder()->getSendDatetime()?$send_date: $this->__('To Be Confirmed') ?></td>
         </tr>
         <tr>
-           <td><strong><?php echo $this->__('Pickup Date:')?></strong></td><td><?php echo $return_date ?></td>
+           <td><strong><?php echo $this->__('Pickup Date:')?></strong></td><td><?php echo $this->getPdfHelper()->getOrder()->getReturnDatetime()?$return_date: $this->__('To Be Confirmed') ?></td>
         </tr>
         <tr>
             <td colspan="2">&nbsp;</td>
